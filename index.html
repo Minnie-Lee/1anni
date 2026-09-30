@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- scroll-smooth 클래스로 버튼 클릭 시 부드럽게 이동합니다 -->
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리의 1주년 기념일</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="relative w-full overflow-x-hidden">
+
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <main class="w-full max-w-4xl mx-auto relative z-10 pb-24">
+        
+        <!-- 1. 홈 섹션 -->
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl w-full max-w-lg mx-auto">
+                <p class="font-script text-3xl mb-4 text-rose-600 drop-shadow-sm">Our 1st Anniversary</p>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight text-rose-900 drop-shadow-sm mb-6">
+                    우리의 1주년을<br>축하해 <span class="animate-heartbeat">❤</span>
+                </h1>
+                <p class="text-lg text-rose-800 font-medium mb-8">너와 함께한 365일, 모든 순간이 기적이었어.</p>
+                
+                <div class="animate-bounce text-rose-500 text-2xl mt-10">
+                    <i class="fa-solid fa-angles-down"></i>
+                    <p class="text-sm mt-2 font-bold">아래로 스크롤 해봐!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 갤러리 섹션 -->
+        <section id="gallery" class="min-h-screen flex flex-col items-center justify-center p-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-rose-900 drop-shadow-sm mb-2">우리의 추억들 📸</h2>
+                <p class="text-rose-700">옆으로 넘겨보고, 사진을 눌러봐!</p>
+            </div>
+            
+            <div class="glass-panel p-4 rounded-3xl w-full relative">
+                <!-- 왼쪽 화살표 -->
+                <button onclick="slideGallery(-1)" class="absolute left-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 shadow-md text-rose-500 hover:bg-rose-100 transition">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- 가로 스크롤 컨테이너 (스와이프 / 드래그 / 휠 / 화살표) -->
+                <div id="gallery-track" class="flex overflow-x-auto gap-2 pb-4 snap-x snap-mandatory no-scrollbar w-full items-center cursor-grab select-none">
+                    <img src="KakaoTalk_20260930_214338089.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_01.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_02.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_03.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_04.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_05.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_06.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_07.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_08.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_09.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_10.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_11.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_12.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_13.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_14.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_15.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_16.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_17.webp" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_18.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_19.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_20.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_21.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_22.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_23.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_24.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_25.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_26.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_27.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_28.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                    <img src="KakaoTalk_20260930_214338089_29.jpg" draggable="false" onclick="openPhoto(this.src)" class="w-[31%] shrink-0 aspect-square object-cover rounded-xl snap-center shadow-sm cursor-pointer hover:opacity-80 transition">
+                </div>
+
+                <!-- 오른쪽 화살표 -->
+                <button onclick="slideGallery(1)" class="absolute right-1 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/90 shadow-md text-rose-500 hover:bg-rose-100 transition">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 3. 카운트다운 섹션 -->
+        <section id="countdown" class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl w-full max-w-lg mx-auto">
+                <h2 class="text-3xl font-bold text-rose-900 drop-shadow-sm mb-2">1주년 카운트다운 ⏱️</h2>
+                <p class="text-rose-700 mb-8">우리의 특별한 날, 2026년 10월 1일까지</p>
+                
+                <div class="flex justify-center items-center gap-2 md:gap-4 mb-8 text-rose-900">
+                    <div class="flex flex-col items-center">
+                        <div class="glass-panel bg-white/80 w-14 h-14 flex items-center justify-center rounded-2xl text-xl font-bold" id="cd-days">00</div>
+                        <span class="mt-2 text-xs font-bold text-rose-800">일</span>
+                    </div>
+                    <div class="text-xl font-bold mb-6 text-rose-400">:</div>
+                    <div class="flex flex-col items-center">
+                        <div class="glass-panel bg-white/80 w-14 h-14 flex items-center justify-center rounded-2xl text-xl font-bold" id="cd-hours">00</div>
+                        <span class="mt-2 text-xs font-bold text-rose-800">시간</span>
+                    </div>
+                    <div class="text-xl font-bold mb-6 text-rose-400">:</div>
+                    <div class="flex flex-col items-center">
+                        <div class="glass-panel bg-white/80 w-14 h-14 flex items-center justify-center rounded-2xl text-xl font-bold" id="cd-minutes">00</div>
+                        <span class="mt-2 text-xs font-bold text-rose-800">분</span>
+                    </div>
+                    <div class="text-xl font-bold mb-6 text-rose-400">:</div>
+                    <div class="flex flex-col items-center">
+                        <div class="glass-panel bg-white/80 w-14 h-14 flex items-center justify-center rounded-2xl text-xl font-bold" id="cd-seconds">00</div>
+                        <span class="mt-2 text-xs font-bold text-rose-800">초</span>
+                    </div>
+                </div>
+                <div id="countdown-message" class="text-xl font-bold text-rose-600 animate-pulse hidden">
+                    🎉 드디어 우리의 1주년이야! 사랑해! 🎉
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 사진 클릭 시 뜨는 확대 모달 -->
+    <div id="photo-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4" onclick="closePhoto()">
+        <button class="absolute top-6 right-6 text-white text-3xl opacity-80 hover:opacity-100">&times;</button>
+        <img id="modal-img" src="" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl">
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 pb-safe">
+        <div class="glass-panel mx-4 mb-4 rounded-full px-2 py-2 flex justify-between items-center shadow-lg border border-white/60 bg-white/80">
+            <a href="#home" class="flex-1 py-3 px-4 rounded-full text-center transition-all duration-300 font-bold text-rose-500 hover:bg-rose-100/50">
+                <i class="fa-solid fa-house mb-1 block text-lg"></i>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="#gallery" class="flex-1 py-3 px-4 rounded-full text-center transition-all duration-300 font-bold text-rose-500 hover:bg-rose-100/50">
+                <i class="fa-solid fa-image mb-1 block text-lg"></i>
+                <span class="text-xs">Gallery</span>
+            </a>
+            <a href="#countdown" class="flex-1 py-3 px-4 rounded-full text-center transition-all duration-300 font-bold text-rose-500 hover:bg-rose-100/50">
+                <i class="fa-solid fa-clock mb-1 block text-lg"></i>
+                <span class="text-xs">D-Day</span>
+            </a>
+        </div>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFE5E5 100%);
+    background-attachment: fixed;
+    color: #4A0E17;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.font-script { font-family: 'Dancing Script', cursive; }
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(255, 200, 200, 0.4);
+}
+
+.view-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.view-section.active { display: flex; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.15); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.15); }
+    70% { transform: scale(1); }
+}
+
+.animate-heartbeat {
+    display: inline-block;
+    animation: heartbeat 2s infinite;
+    color: #e11d48;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: floatUp 10s linear infinite;
+}
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+/* 스크롤바 완전 숨김 (가로 스와이프할 때 예쁘게 보임) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
